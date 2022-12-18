@@ -13,7 +13,7 @@ exports.readActors = async () => {
         const actors = await Actor.findAll();
         let temp = [];
         actors.forEach(actor => {
-            temp.push({name: actor.name});
+            temp.push({name: actor.name, "Starred In": actor.starredIn});
         })
         console.table(temp);
     } catch (error) {

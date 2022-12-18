@@ -9,7 +9,7 @@ const Actor = openSequelizeConnection.define("Actor", {
         primaryKey: true
     },
     starredIn: {
-        type: DataTypes.ARRAY(DataTypes.STRING)
+        type: DataTypes.STRING
     }
 }, {modelName: "actor"});
 

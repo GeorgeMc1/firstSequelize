@@ -2,8 +2,8 @@ const Movie = require("./movie/table");
 const Actor = require("./actor/table");
 const User = require("./user/table");
 
-Movie.hasMany(Actor, {foreignKey:"name"});
-Actor.belongsToMany(Movie, {foreignKey: "name", through:"actorMovies"});
+Movie.hasMany(Actor);
+Actor.belongsToMany(Movie, {through:"actorMovies"});
 
-User.hasMany(Movie, {foreignKey:"title"});
-Movie.belongsToMany(User, {foreignKey: "title", through:"userMovies"});
+User.hasMany(Movie);
+Movie.belongsToMany(User, {through:"userMovies"});
